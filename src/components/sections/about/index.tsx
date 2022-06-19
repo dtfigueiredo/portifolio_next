@@ -1,11 +1,16 @@
-import { Flex, Heading } from "@chakra-ui/react";
 import Image from "next/image";
 
+import { FlexDiv, Heading2, Main, PhotoBox } from "../../../styles/styles";
+
 export default function About() {
+  const customBorder = "91% 9% 49% 51% / 30% 44% 56% 70%";
   return (
-    <>
-      <h2>Sobre Mim:</h2>
-      <div>
+    <Main>
+      <Heading2>Sobre Mim</Heading2>
+      <FlexDiv>
+        <PhotoBox itemProp="about">
+          <Image style={{ borderRadius: customBorder }} width={384} height={384} src="https://avatars.githubusercontent.com/u/85001250?v=4" alt="Daniel Figueiredo" />
+        </PhotoBox>
         <div>
           <h4>Minha maior qualidade é aprender o que eu ainda não sei.</h4>
           <p>
@@ -17,10 +22,7 @@ export default function About() {
             AdobeXD.
           </span>
         </div>
-        <div>
-          <Image width="100px" height="100px" src="https://avatars.githubusercontent.com/u/85001250?v=4" alt="Daniel Figueiredo" />
-        </div>
-      </div>
-    </>
+      </FlexDiv>
+    </Main>
   );
 }

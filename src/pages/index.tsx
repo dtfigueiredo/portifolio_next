@@ -9,21 +9,21 @@ import Skills from "../components/sections/skills";
 
 export const Home: NextPage = () => {
   return (
-    <>
+    <Wrapper>
       <Head>
         <title>Daniel Figueiredo</title>
         <meta name="description" content="Web portifólio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Wrapper>
-        <Header />
-        {/* <About /> */}
-        {/* <Contact /> */}
-        {/* <Projects /> */}
-        {/* <Skills /> */}
-      </Wrapper>
-    </>
+      {/* <Wrapper> */}
+      <Header />
+      <About />
+      {/* <Contact /> */}
+      {/* <Projects /> */}
+      {/* <Skills /> */}
+      {/* </Wrapper> */}
+    </Wrapper>
   );
 };
 
