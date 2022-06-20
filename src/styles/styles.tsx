@@ -71,9 +71,26 @@ export const Navigation = styled.nav`
   width: 100%;
 `;
 
-export const UList = styled.ul`
+export const UList = styled.ul<{ component: string }>`
+  width: ${(props) => {
+    switch (props.component) {
+      case "header":
+        return "unset";
+      default:
+        return "100%";
+    }
+  }};
+  flex-wrap: wrap;
+
   display: flex;
-  justify-content: flex-end;
+  justify-content: ${(props) => {
+    switch (props.component) {
+      case "header":
+        return "flex-end";
+      default:
+        return "center";
+    }
+  }};
   align-items: center;
 
   @media screen and (max-width: 425px) {
@@ -167,5 +184,21 @@ export const FlexDiv = styled.div`
 
   @media screen and (max-width: 425px) {
     flex-direction: column;
+  }
+`;
+
+export const ContactBox = styled.div`
+  margin: 5rem auto 0;
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  @media screen and (max-width: 425px) {
+    align-items: center;
+    margin-top: 4rem;
   }
 `;

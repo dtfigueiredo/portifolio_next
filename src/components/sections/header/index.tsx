@@ -1,7 +1,4 @@
-import Image from "next/image";
-
-import logo from "../../../../public/logo.png";
-import { NavItem, HeaderWrapper, ImageBox, Navigation, UList } from "../../../styles/styles";
+import { HeaderWrapper, ImageBox, Navigation, NavItem, UList } from "../../../styles/styles";
 import { Heading1 } from "../../common/headings";
 
 export default function Header() {
@@ -17,7 +14,7 @@ export default function Header() {
       </ImageBox>
 
       <Navigation>
-        <UList>
+        <UList component="header">
           <NavItem>About</NavItem>
 
           <NavItem>Contact</NavItem>

@@ -1,5 +1,11 @@
 import { SiCss3, SiHtml5, SiJavascript, SiNextdotjs, SiReact, SiSass, SiStyledcomponents, SiTailwindcss, SiTypescript } from "react-icons/si";
 
+import { ContactBox, UList } from "../../../styles/styles";
+import { CardBtn } from "../../common/button";
+import { Heading2 } from "../../common/headings";
+import { Icons } from "../../common/icon";
+import { Paragragh } from "../../common/paragraph";
+
 export default function Skills() {
   const skills = [
     { name: "html", color: "#dd4b25", icon: SiHtml5 },
@@ -14,17 +20,20 @@ export default function Skills() {
   ];
 
   return (
-    <>
-      <h2>Minhas Skills</h2>
-      <div>
+    <ContactBox>
+      <Heading2>Minhas Skills</Heading2>
+      <UList component="skillCard">
         {skills.map((skill, index) => (
           <li key={`${index}-${skill.name}`}>
-            <div color={skill.color}>
-              <p>{skill.name}</p>
-            </div>
+            <CardBtn color={skill.color}>
+              <Icons>
+                <skill.icon />
+              </Icons>
+              <Paragragh component="button">{skill.name}</Paragragh>
+            </CardBtn>
           </li>
         ))}
-      </div>
-    </>
+      </UList>
+    </ContactBox>
   );
 }
