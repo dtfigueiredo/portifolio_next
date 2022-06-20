@@ -19,7 +19,7 @@ export const Home: NextPage = () => {
       {/* <Wrapper> */}
       <Header />
       <About />
-      {/* <Contact /> */}
+      <Contact />
       {/* <Projects /> */}
       {/* <Skills /> */}
       {/* </Wrapper> */}

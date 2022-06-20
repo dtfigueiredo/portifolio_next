@@ -52,6 +52,7 @@ export const Heading4 = styled.h4`
   margin: 1em 0 2rem;
   font-family: var(--font-poppins);
   font-size: 1.5rem;
+  letter-spacing: 0.125rem;
 
   @media screen and (max-width: 767px) {
     text-align: center;

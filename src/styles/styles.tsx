@@ -15,7 +15,7 @@ export const GlobalStyle = createGlobalStyle`
 
     --bg3: #98dad9;
 
-    --width-web: 1200px;
+    --width-web: 1100px;
     --width-tablet: 90%;
     --width-mobile: 100%;
 
@@ -103,7 +103,6 @@ export const NavItem = styled.li`
 
 export const Main = styled.main`
   margin: 5rem auto 0;
-  padding: 0.5rem;
 
   width: 100%;
 
@@ -114,6 +113,7 @@ export const Main = styled.main`
 
   @media screen and (max-width: 425px) {
     align-items: center;
+    margin-top: 4rem;
   }
 `;
 
@@ -124,10 +124,6 @@ export const PhotoBox = styled.figure`
   display: flex;
   justify-content: center;
   align-items: center;
-
-  @media screen and (max-width: 425px) {
-    margin-top: 1em;
-  }
 
   /* -webkit-animation: slide-in-left 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-in-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
@@ -158,7 +154,11 @@ export const PhotoBox = styled.figure`
   } */
 `;
 
-export const AboutArticle = styled.article``;
+export const AboutArticle = styled.article`
+  margin-left: 1rem;
+  padding: 0 1rem;
+  align-self: flex-start;
+`;
 
 export const FlexDiv = styled.div`
   display: flex;
