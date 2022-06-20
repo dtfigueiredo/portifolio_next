@@ -1,7 +1,8 @@
 import Image from "next/image";
 
 import logo from "../../../../public/logo.png";
-import { NavItem, HeaderWrapper, ImageBox, Navigation, Heading1 } from "../../../styles/styles";
+import { NavItem, HeaderWrapper, ImageBox, Navigation, UList } from "../../../styles/styles";
+import { Heading1 } from "../../common/headings";
 
 export default function Header() {
   return (
@@ -16,13 +17,15 @@ export default function Header() {
       </ImageBox>
 
       <Navigation>
-        <NavItem>About</NavItem>
+        <UList>
+          <NavItem>About</NavItem>
 
-        <NavItem>Contact</NavItem>
+          <NavItem>Contact</NavItem>
 
-        <NavItem>Projects</NavItem>
+          <NavItem>Projects</NavItem>
 
-        <NavItem>Skills</NavItem>
+          <NavItem>Skills</NavItem>
+        </UList>
       </Navigation>
     </HeaderWrapper>
   );

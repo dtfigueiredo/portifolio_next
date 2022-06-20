@@ -1,6 +1,8 @@
 import Image from "next/image";
 
-import { FlexDiv, Heading2, Main, PhotoBox } from "../../../styles/styles";
+import { AboutArticle, FlexDiv, Main, PhotoBox } from "../../../styles/styles";
+import { Heading2, Heading4 } from "../../common/headings";
+import { Paragragh } from "../../common/paragraph";
 
 export default function About() {
   const customBorder = "91% 9% 49% 51% / 30% 44% 56% 70%";
@@ -11,17 +13,17 @@ export default function About() {
         <PhotoBox itemProp="about">
           <Image style={{ borderRadius: customBorder }} width={384} height={384} src="https://avatars.githubusercontent.com/u/85001250?v=4" alt="Daniel Figueiredo" />
         </PhotoBox>
-        <div>
-          <h4>Minha maior qualidade é aprender o que eu ainda não sei.</h4>
-          <p>
+        <AboutArticle>
+          <Heading4>Minha maior qualidade é aprender o que eu ainda não sei.</Heading4>
+          <Paragragh>
             Estou sempre em busca de adquirir conhecimento, seja para evoluir nas tecnologias que já sei, como também adquirindo conhecimento sobre novas tecnologias. Ao longo da
             minha experiência profissional, desenvolvi habilidades como: Comunicação, Gestão de Equipes, Gestão de Conflitos, Liderança de Equipes.
-          </p>
-          <span>
+          </Paragragh>
+          <Paragragh>
             Algumas palavras que resumem minha rotina como desenvolvedor front-end são: Scrum, JavaScript, React.Js, Styled-Components, Css-in-Js, Sass, Git e Github, Figma e
             AdobeXD.
-          </span>
-        </div>
+          </Paragragh>
+        </AboutArticle>
       </FlexDiv>
     </Main>
   );
