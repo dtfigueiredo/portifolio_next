@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
   :root{
@@ -48,101 +48,101 @@ export const GlobalStyle = createGlobalStyle`
     width: 0;
   }
 
-`;
+`
 
 export const HeaderWrapper = styled.header`
-  margin-top: 2rem;
+	margin-top: 2rem;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 
-  @media screen and (max-width: 425px) {
-    flex-direction: column;
-  }
-`;
+	@media screen and (max-width: 425px) {
+		flex-direction: column;
+	}
+`
 
 export const ImageBox = styled.figure`
-  width: fit-content;
-  padding: 0.5rem;
-`;
+	width: fit-content;
+	padding: 0.5rem;
+`
 
 export const Navigation = styled.nav`
-  width: 100%;
-`;
+	width: 100%;
+`
 
 export const UList = styled.ul<{ component: string }>`
-  width: ${(props) => {
-    switch (props.component) {
-      case "header":
-        return "unset";
-      default:
-        return "100%";
-    }
-  }};
-  flex-wrap: wrap;
+	width: ${props => {
+		switch (props.component) {
+			case 'header':
+				return 'unset'
+			default:
+				return '100%'
+		}
+	}};
+	flex-wrap: wrap;
 
-  display: flex;
-  justify-content: ${(props) => {
-    switch (props.component) {
-      case "header":
-        return "flex-end";
-      default:
-        return "center";
-    }
-  }};
-  align-items: center;
+	display: flex;
+	justify-content: ${props => {
+		switch (props.component) {
+			case 'header':
+				return 'flex-end'
+			default:
+				return 'center'
+		}
+	}};
+	align-items: center;
 
-  @media screen and (max-width: 425px) {
-    justify-content: center;
-  }
-`;
+	@media screen and (max-width: 425px) {
+		justify-content: center;
+	}
+`
 
 export const NavItem = styled.li`
-  padding: 1rem;
-  margin: 0 0.5rem;
+	padding: 1rem;
+	margin: 0 0.5rem;
 
-  font-size: 1.25rem;
-  font-weight: normal;
+	font-size: 1.25rem;
+	font-weight: normal;
 
-  border-bottom: 3px solid transparent;
+	border-bottom: 3px solid transparent;
 
-  transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
 
-  &:hover {
-    transform: scale(1.25);
-    font-weight: bold;
-    color: var(--color-green);
-    border-bottom: 3px solid var(--color-green);
-    cursor: pointer;
-  }
-`;
+	&:hover {
+		transform: scale(1.25);
+		font-weight: bold;
+		color: var(--color-green);
+		border-bottom: 3px solid var(--color-green);
+		cursor: pointer;
+	}
+`
 
 export const Main = styled.main`
-  margin: 5rem auto 0;
+	margin: 5rem auto 0;
 
-  width: 100%;
+	width: 100%;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
 
-  @media screen and (max-width: 425px) {
-    align-items: center;
-    margin-top: 4rem;
-  }
-`;
+	@media screen and (max-width: 425px) {
+		align-items: center;
+		margin-top: 4rem;
+	}
+`
 
 export const PhotoBox = styled.figure`
-  width: 100%;
-  padding: 0.5rem;
+	width: 100%;
+	padding: 0.5rem;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
-  /* -webkit-animation: slide-in-left 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+	/* -webkit-animation: slide-in-left 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-in-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 
   @-webkit-keyframes slide-in-left {
@@ -169,36 +169,36 @@ export const PhotoBox = styled.figure`
       opacity: 1;
     }
   } */
-`;
+`
 
 export const AboutArticle = styled.article`
-  margin-left: 1rem;
-  padding: 0 1rem;
-  align-self: flex-start;
-`;
+	margin-left: 1rem;
+	padding: 0 1rem;
+	align-self: flex-start;
+`
 
 export const FlexDiv = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 
-  @media screen and (max-width: 425px) {
-    flex-direction: column;
-  }
-`;
+	@media screen and (max-width: 425px) {
+		flex-direction: column;
+	}
+`
 
 export const ContactBox = styled.div`
-  margin: 5rem auto 0;
+	margin: 5rem auto 0;
 
-  width: 100%;
+	width: 100%;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
 
-  @media screen and (max-width: 425px) {
-    align-items: center;
-    margin-top: 4rem;
-  }
-`;
+	@media screen and (max-width: 425px) {
+		align-items: center;
+		margin-top: 4rem;
+	}
+`
