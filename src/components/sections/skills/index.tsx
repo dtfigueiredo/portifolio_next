@@ -12,11 +12,12 @@ import {
 	SiTypescript,
 } from 'react-icons/si'
 
-import { ContactBox, UList } from '../../../styles/styles'
+import { ContactBox, FlexDiv, SkillsContainer, SkillsDescription, UList } from '../../../styles/styles'
 import { CardBtn } from '../../common/button'
 import { Heading2 } from '../../common/headings'
 import { Icons } from '../../common/icon'
 import { Paragragh } from '../../common/paragraph'
+import SkillDescription from './skillsDescription'
 
 export default function Skills() {
 	const skills = [
@@ -36,18 +37,25 @@ export default function Skills() {
 	return (
 		<ContactBox>
 			<Heading2>Minhas Skills</Heading2>
-			<UList component='skillCard'>
-				{skills.map((skill, index) => (
-					<li key={`${index}-${skill.name}`}>
-						<CardBtn color={skill.color}>
-							<Icons>
-								<skill.icon />
-							</Icons>
-							<Paragragh component='button'>{skill.name}</Paragragh>
-						</CardBtn>
-					</li>
-				))}
-			</UList>
+			<FlexDiv component='skills'>
+				<SkillsContainer>
+					<UList component='skillCard'>
+						{skills.map((skill, index) => (
+							<li key={`${index}-${skill.name}`}>
+								<CardBtn color={skill.color}>
+									<Icons>
+										<skill.icon />
+									</Icons>
+									<Paragragh component='button'>{skill.name}</Paragragh>
+								</CardBtn>
+							</li>
+						))}
+					</UList>
+				</SkillsContainer>
+				<SkillsDescription>
+					<SkillDescription />
+				</SkillsDescription>
+			</FlexDiv>
 		</ContactBox>
 	)
 }

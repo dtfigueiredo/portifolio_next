@@ -6,7 +6,7 @@ export const Heading1 = styled.h1`
 		display: block;
 	}
 
-	font-family: var(--font-poppins);
+	font-family: var(--font-garamond);
 	font-size: 3rem;
 	text-transform: uppercase;
 	letter-spacing: 0.25rem;
@@ -44,13 +44,14 @@ export const Heading1 = styled.h1`
 
 export const Heading2 = styled.h2`
 	margin: 1rem 0 2rem;
-	font-family: var(--font-poppins);
+	font-family: var(--font-garamond);
 	font-size: 3rem;
+	letter-spacing: 0.125rem;
 `
 
 export const Heading4 = styled.h4`
 	margin: 1em 0 2rem;
-	font-family: var(--font-poppins);
+	font-family: var(--font-garamond);
 	font-size: 1.5rem;
 	letter-spacing: 0.125rem;
 

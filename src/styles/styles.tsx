@@ -5,6 +5,7 @@ export const GlobalStyle = createGlobalStyle`
     --font-inters: 'Inter', sans-serif;
     --font-poppins: 'Poppins', sans-serif;
     --font-open-sans: 'Open Sans', sans-serif;
+	--font-garamond: 'EB Garamond', serif;
 
     --color-body-bg: #1a1a1a;
     /* --gradient-body-bg: linear-gradient(315deg, rgba(26,26,26,1) 0%, rgba(46,66,77,1) 80%, rgba(91,178,145,1) 100%); */
@@ -60,16 +61,16 @@ export const HeaderWrapper = styled.header`
 	@media screen and (max-width: 425px) {
 		flex-direction: column;
 	}
-`
+`;
 
 export const ImageBox = styled.figure`
 	width: fit-content;
 	padding: 0.5rem;
-`
+`;
 
 export const Navigation = styled.nav`
 	width: 100%;
-`
+`;
 
 export const UList = styled.ul<{ component: string }>`
 	width: ${props => {
@@ -96,7 +97,7 @@ export const UList = styled.ul<{ component: string }>`
 	@media screen and (max-width: 425px) {
 		justify-content: center;
 	}
-`
+`;
 
 export const NavItem = styled.li`
 	padding: 1rem;
@@ -116,7 +117,7 @@ export const NavItem = styled.li`
 		border-bottom: 3px solid var(--color-green);
 		cursor: pointer;
 	}
-`
+`;
 
 export const Main = styled.main`
 	margin: 5rem auto 0;
@@ -132,7 +133,7 @@ export const Main = styled.main`
 		align-items: center;
 		margin-top: 4rem;
 	}
-`
+`;
 
 export const PhotoBox = styled.figure`
 	width: 100%;
@@ -169,36 +170,56 @@ export const PhotoBox = styled.figure`
       opacity: 1;
     }
   } */
-`
+`;
 
 export const AboutArticle = styled.article`
 	margin-left: 1rem;
 	padding: 0 1rem;
 	align-self: flex-start;
-`
+`;
 
-export const FlexDiv = styled.div`
+export const FlexDiv = styled.div<{ component: string }>`
 	display: flex;
+	flex-direction: ${(props) => props.component === 'description' ? 'column' : 'row'};
 	justify-content: space-between;
 	align-items: center;
 
-	@media screen and (max-width: 425px) {
-		flex-direction: column;
-	}
-`
+	width:100%;
+	min-heigth:100%;
+
+	gap: ${(props) => props.component === 'skills' ? '1rem' : ''};
+
+@media screen and(max - width: 425px) {
+	flex - direction: column;
+}
+`;
 
 export const ContactBox = styled.div`
-	margin: 5rem auto 0;
+margin: 5rem auto 0;
 
-	width: 100%;
+width: 100 %;
 
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: flex-start;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
 
-	@media screen and (max-width: 425px) {
-		align-items: center;
-		margin-top: 4rem;
-	}
-`
+@media screen and(max - width: 425px) {
+	align - items: center;
+	margin - top: 4rem;
+}
+`;
+
+export const SkillsContainer = styled.div`
+flex: 1;
+padding: 0.5rem;
+
+border: 1px solid tomato;
+`;
+
+export const SkillsDescription = styled.div`
+width: 40%;
+padding: 0.5rem;
+
+border: 1px solid tomato;
+`;
